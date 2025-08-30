@@ -7,17 +7,17 @@
 - Hypervisor:
     - Thor:
         icon: proxmox.png # icons found here https://github.com/walkxcode/dashboard-icons
-        href: {{ HOMEPAGE_VAR_PROXMOX_URL }}
+        href: {{HOMEPAGE_VAR_PROXMOX_URL}}
         description: Proxmox VE Node
         widget:
             type: proxmox
-            url: {{ HOMEPAGE_VAR_PROXMOX_HOST }}
-            username: {{ HOMEPAGE_VAR_PROXMOX_TOKEN }}
-            password: {{ HOMEPAGE_VAR_PROXMOX_SECRET }}
+            url: {{HOMEPAGE_VAR_PROXMOX_HOST}}
+            username: {{HOMEPAGE_VAR_PROXMOX_TOKEN}}
+            password: {{HOMEPAGE_VAR_PROXMOX_SECRET}}
             node: thor # optional
     - Home Assistant:
         icon: home-assistant.png
-        href: {{ HOMEPAGE_VAR_HOME_ASSISTANT_URL }}
+        href: {{HOMEPAGE_VAR_HOME_ASSISTANT_URL}}
         description: HAOS VM
         proxmoxNode: thor
         proxmoxVMID: 100
@@ -27,7 +27,7 @@
 - External Services:
     - Birdnet:
         icon: birdnet.png
-        href: {{ HOMEPAGE_VAR_BIRDNET_URL }}
+        href: {{HOMEPAGE_VAR_BIRDNET_URL}}
         description: Container Status
         server: local-docker
         container: birdnet-go
@@ -39,15 +39,15 @@
 - Internal Services:
     - Komodo:
         icon: komodo
-        href: {{ HOMEPAGE_VAR_KOMODO_URL }}
+        href: {{HOMEPAGE_VAR_KOMODO_URL}}
         description: Stack Stats
         # server: local-docker
         # container: komodo-core-1
         widget:
             type: komodo
-            url: {{ HOMEPAGE_VAR_KOMODO_URL }}
-            key: {{ HOMEPAGE_VAR_KOMODO_KEY }}
-            secret: {{ HOMEPAGE_VAR_KOMODO_SECRET }}
+            url: {{HOMEPAGE_VAR_KOMODO_URL}}
+            key: {{HOMEPAGE_VAR_KOMODO_KEY}}
+            secret: {{HOMEPAGE_VAR_KOMODO_SECRET}}
             # showSummary: true # optional, default: false
             showStacks: true # optional, default: false
             fields: ["total", "running", "down", "unhealthy"]
