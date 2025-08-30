@@ -1,0 +1,30 @@
+---
+# For configuration options and examples, please see:
+# https://gethomepage.dev/configs/bookmarks
+
+- Work:
+    - GitHub Project:
+        - icon: si-github
+          href: {{ HOMEPAGE_VAR_GITHUB_PROJECT_URL }}
+    - Harvest:
+        - icon: mdi-currency-usd
+          href: {{ HOMEPAGE_VAR_HARVEST_URL }}
+    - Quickbooks:
+        - icon: si-quickbooks
+          href: {{ HOMEPAGE_VAR_QUICKBOOKS_URL }}
+
+- Tools:
+    - Kagi Assistant:
+        - icon: kagi
+          href: https://kagi.com/assistant
+
+- Entertainment:
+    - YouTube:
+        - icon: youtube
+          href: https://youtube.com/
+    - Twitch:
+        - icon: twitch
+          href: https://twitch.tv/
+    - TWIV:
+        - icon: https://thisweekinvideogames.com/wp-content/uploads/2024/06/cropped-512x512-1-32x32.png
+          href: https://thisweekinvideogames.com/
