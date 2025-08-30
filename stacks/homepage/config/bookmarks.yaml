@@ -5,13 +5,13 @@
 - Work:
     - GitHub Project:
         - icon: si-github
-          href: "{{ HOMEPAGE_VAR_GITHUB_PROJECT_URL }}"
+          href: {{HOMEPAGE_VAR_GITHUB_PROJECT_URL}}
     - Harvest:
         - icon: mdi-currency-usd
-          href: {{ HOMEPAGE_VAR_HARVEST_URL }}
+          href: {{HOMEPAGE_VAR_HARVEST_URL}}
     - Quickbooks:
         - icon: si-quickbooks
-          href: {{ HOMEPAGE_VAR_QUICKBOOKS_URL }}
+          href: {{HOMEPAGE_VAR_QUICKBOOKS_URL}}
 
 - Tools:
     - Kagi Assistant:
