@@ -1,0 +1,22 @@
+---
+# For configuration options and examples, please see:
+# https://gethomepage.dev/configs/info-widgets/
+
+- resources:
+    label: Docker VM Resource Utilization
+    cpu: true
+    memory: true
+    disk: /
+    expanded: true
+
+- search:
+    provider: custom
+    url: https://kagi.com/search?q=
+    target: _blank
+    # suggestionUrl: https://kagi.com/api/autosuggest?q=
+    # showSearchSuggestions: true
+
+- datetime:
+    text_size: xl
+    format:
+      timeStyle: short
