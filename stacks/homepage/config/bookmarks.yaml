@@ -17,6 +17,9 @@
     - Kagi Assistant:
         - icon: kagi
           href: https://kagi.com/assistant
+    - IT Tools:
+        - icon: https://it-tools.tech/favicon-32x32.png
+          href: https://it-tools.tech/
 
 - Entertainment:
     - YouTube:

@@ -6,7 +6,7 @@ title: Asgard Homepage
 
 background:
   image: https://images.hdqwalls.com/wallpapers/firewatch-the-watchtower-view-rs.jpg?auto=format&fit=crop&w=2560&q=80
-  opacity: 40
+  opacity: 25
 
 # Disables the palette switcher
 color: slate

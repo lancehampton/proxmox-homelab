@@ -5,16 +5,30 @@
 # https://gethomepage.dev/configs/services/#icons
 
 - Hypervisor:
-    - Thor:
+    - Proxmox:
         icon: proxmox.png # icons found here https://github.com/walkxcode/dashboard-icons
         href: {{HOMEPAGE_VAR_PROXMOX_URL}}
-        description: Proxmox VE Node
+        description: Thor PVE Stats
         widget:
             type: proxmox
             url: {{HOMEPAGE_VAR_PROXMOX_HOST}}
             username: {{HOMEPAGE_VAR_PROXMOX_TOKEN}}
             password: {{HOMEPAGE_VAR_PROXMOX_SECRET}}
             node: thor # optional
+    - Beszel:
+        icon: beszel
+        href: {{HOMEPAGE_VAR_BESZEL_URL}}
+        description: Thor Beszel Stats
+        # server: local-docker
+        # container: beszel
+        widget:
+            type: beszel
+            url: {{HOMEPAGE_VAR_BESZEL_URL}}
+            username: {{HOMEPAGE_VAR_BESZEL_USERNAME}}
+            password: {{HOMEPAGE_VAR_BESZEL_PASSWORD}}
+            systemId: {{HOMEPAGE_VAR_BESZEL_SYSTEM_ID}}
+            version: 2 # optional, default is 1
+            fields: ["name", "status", "updated", "cpu", "memory", "disk", "network"]
     - Home Assistant:
         icon: home-assistant.png
         href: {{HOMEPAGE_VAR_HOME_ASSISTANT_URL}}
