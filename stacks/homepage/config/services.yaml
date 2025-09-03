@@ -65,6 +65,12 @@
             # showSummary: true # optional, default: false
             showStacks: true # optional, default: false
             fields: ["total", "running", "down", "unhealthy"]
+    - Readeck:
+        icon: readeck.png
+        href: {{HOMEPAGE_VAR_READECK_URL}}
+        description: Read-It-Later
+        server: local-docker
+        container: readeck
     - Uptime Kuma: # https://gethomepage.dev/widgets/services/uptime-kuma/
         href: http://localhost/
         description: TODO
