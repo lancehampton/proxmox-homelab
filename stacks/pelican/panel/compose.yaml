@@ -10,12 +10,16 @@ services:
     extra_hosts:
       - "host.docker.internal:host-gateway"
     volumes:
-      - ./data:/pelican-data
-      - ./logs:/var/www/html/storage/logs
+      - pelican-data:/pelican-data
+      - pelican-logs:/var/www/html/storage/logs
     environment:
       XDG_DATA_HOME: /pelican-data
       APP_URL: "http://localhost"
       ADMIN_EMAIL: ${ADMIN_EMAIL}
+
+volumes:
+  pelican-data:
+  pelican-logs:
 
 networks:
   default:
