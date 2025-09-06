@@ -16,9 +16,7 @@ services:
       # Optional, a list of hostnames allowed in HTTP requests.
       # - READECK_ALLOWED_HOSTS=readeck.example.com
     volumes:
-      - type: bind
-        source: ./data
-        target: /readeck
+      - ./readeck-data:/readeck
     restart: unless-stopped
     healthcheck:
       test: ["CMD", "/bin/readeck", "healthcheck", "-config", "config.toml"]
