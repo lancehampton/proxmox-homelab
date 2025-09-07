@@ -12,8 +12,6 @@ services:
     image: mongo
     labels:
       komodo.skip: null # Prevent Komodo from stopping with StopAllContainers
-      glance.parent: komodo-core
-      glance.name: komodo-mongo
     command: --quiet --wiredTigerCacheSizeGB 0.25
     restart: unless-stopped
     # ports:
@@ -28,9 +26,6 @@ services:
     image: ghcr.io/moghtech/komodo-core:${COMPOSE_KOMODO_IMAGE_TAG:-latest}
     labels:
       komodo.skip: null # Prevent Komodo from stopping with StopAllContainers
-      glance.name: Komodo
-      glance.icon: di:komodo
-      glance.id: komodo-core
     restart: unless-stopped
     depends_on:
       - mongo
@@ -60,8 +55,6 @@ services:
     image: ghcr.io/moghtech/komodo-periphery:${COMPOSE_KOMODO_IMAGE_TAG:-latest}
     labels:
       komodo.skip: null # Prevent Komodo from stopping with StopAllContainers
-      glance.parent: komodo-core
-      glance.name: komodo-periphery
     restart: unless-stopped
     env_file: .env
     volumes:
