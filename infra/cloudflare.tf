@@ -46,6 +46,10 @@ locals {
   }
 }
 
+data "cloudflare_zone" "homelab" {
+  zone_id = var.cloudflare_zone_id
+}
+
 resource "cloudflare_zero_trust_tunnel_cloudflared" "docker_vm" {
   account_id = var.cloudflare_account_id
   name       = "thor"
@@ -55,7 +59,7 @@ resource "cloudflare_zero_trust_tunnel_cloudflared" "docker_vm" {
 resource "cloudflare_dns_record" "apps" {
   for_each = var.apps
 
-  zone_id = var.cloudflare_zone_id
+  zone_id = data.cloudflare_zone.homelab.zone_id
   name    = each.value.hostname
   ttl     = 1
   type    = "CNAME"
@@ -64,6 +68,15 @@ resource "cloudflare_dns_record" "apps" {
   proxied = true
 }
 
+# resource "cloudflare_dns_record" "npm_wildcard" {
+#   zone_id = data.cloudflare_zone.homelab.id
+#   name    = "*.local.${data.cloudflare_zone.homelab.name}"
+#   ttl     = 300
+#   type    = "A"
+#   comment = "Nginx Proxy Manager"
+#   content = var.npm_ipv4_address
+#   proxied = false
+# }
 
 resource "cloudflare_zero_trust_access_application" "apps" {
   for_each = var.apps

@@ -82,18 +82,44 @@ variable "apps" {
   # }
 }
 
+variable "npm_ipv4_address" {
+  description = "IPv4 address for Nginx Proxy Manager"
+  type        = string
+}
+
 #############
 # Tailscale #
 #############
 
-# variable "ts_api_key" {
-#   description = "API Key for Tailscale"
-#   type        = string
-#   sensitive   = true
-# }
+variable "ts_api_key" {
+  description = "API Key for Tailscale"
+  type        = string
+  sensitive   = true
+}
 
-# variable "ts_tailnet" {
-#   description = "Tailscale Tailnet name"
-#   type        = string
-# }
+variable "ts_tailnet" {
+  description = "Tailscale Tailnet name"
+  type        = string
+}
 
+
+##############
+# Proxmox VE #
+##############
+
+variable "pve_endpoint" {
+  description = "The endpoint for the Proxmox Virtual Environment API (example: https://host:port)"
+  type        = string
+}
+
+variable "pve_username" {
+  description = "Proxmox User for API Access"
+  type        = string
+  default     = "root@pam"
+}
+
+variable "pve_password" {
+  description = "Password for Proxmox API User"
+  type        = string
+  sensitive   = true
+}

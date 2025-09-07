@@ -5,6 +5,14 @@ terraform {
       source  = "cloudflare/cloudflare"
       version = "5.8.4"
     }
+    tailscale = {
+      source  = "tailscale/tailscale"
+      version = "0.21.1"
+    }
+    proxmox = {
+      source  = "bpg/proxmox"
+      version = "0.82.1"
+    }
   }
 
   # https://developers.cloudflare.com/terraform/advanced-topics/remote-backend/
@@ -26,4 +34,16 @@ terraform {
 
 provider "cloudflare" {
   api_token = var.cloudflare_api_token
+}
+
+provider "tailscale" {
+  api_key = var.ts_api_key
+  tailnet = var.ts_tailnet
+}
+
+provider "proxmox" {
+  endpoint = var.pve_endpoint
+  username = var.pve_username
+  password = var.pve_password
+  insecure = true
 }
