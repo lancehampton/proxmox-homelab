@@ -36,7 +36,7 @@ services:
       - mongo
     ports:
       - 9120:9120
-    env_file: ./.env
+    env_file: .env
     environment:
       KOMODO_DATABASE_ADDRESS: mongo:27017
       KOMODO_DATABASE_USERNAME: ${KOMODO_DB_USERNAME}
@@ -63,7 +63,7 @@ services:
       glance.parent: komodo-core
       glance.name: komodo-periphery
     restart: unless-stopped
-    env_file: ./.env
+    env_file: .env
     volumes:
       ## Mount external docker socket
       - /var/run/docker.sock:/var/run/docker.sock
