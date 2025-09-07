@@ -1,0 +1,9 @@
+services:
+  glance:
+    container_name: glance
+    image: glanceapp/glance:latest
+    restart: unless-stopped
+    volumes:
+      - ./config:/app/config
+    ports:
+      - 3080:8080
