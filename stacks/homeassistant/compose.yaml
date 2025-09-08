@@ -7,7 +7,7 @@ services:
       - /etc/localtime:/etc/localtime:ro
       - /run/dbus:/run/dbus:ro
     devices:
-      - /dev/ttyUSB0:/dev/ttyUSB0 # Zigbee USB stick
+      - "/dev/serial/by-id/usb-Nabu_Casa_SkyConnect_v1.0_7418666a9be5ed119ff46b6262c613ac-if00-port0:/dev/ttyUSB0"
     environment:
       - TZ=America/New_York
     restart: unless-stopped
