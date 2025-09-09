@@ -2,7 +2,8 @@
 # For configuration options and examples, please see:
 # https://gethomepage.dev/configs/settings/
 
-title: Asgard Homepage
+title: Asgard - Home
+favicon: https://upload.wikimedia.org/wikipedia/commons/thumb/9/9e/Valknut-Symbol-triquetra.svg/330px-Valknut-Symbol-triquetra.svg.png
 
 background:
   image: https://images.hdqwalls.com/wallpapers/firewatch-the-watchtower-view-rs.jpg?auto=format&fit=crop&w=2560&q=80
