@@ -71,6 +71,14 @@
         description: Read-It-Later
         server: local-docker
         container: readeck
-    - Uptime Kuma: # https://gethomepage.dev/widgets/services/uptime-kuma/
-        href: http://localhost/
-        description: TODO
+    # - What's Up Docker:
+    #     icon: whats-up-docker.png
+    #     href: {{HOMEPAGE_VAR_WUD_URL}}
+    #     description: Image Updates
+    #     server: local-docker
+    #     container: wud
+    #     widget:
+    #         type: whatsupdocker
+    #         url: {{HOMEPAGE_VAR_WUD_URL}}
+    #         username: {{HOMEPAGE_VAR_WUD_USERNAME}}
+    #         password: {{HOMEPAGE_VAR_WUD_PASSWORD}}
