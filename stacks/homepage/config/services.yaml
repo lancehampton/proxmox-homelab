@@ -30,7 +30,7 @@
             version: 2 # optional, default is 1
             fields: ["cpu", "memory", "disk", "network"]
     - Home Assistant:
-        icon: home-assistant.png
+        icon: home-assistant
         href: {{HOMEPAGE_VAR_HOME_ASSISTANT_URL}}
         description: HAOS VM
         proxmoxNode: thor
@@ -40,13 +40,13 @@
 
 - External Services:
     - Birdnet:
-        icon: birdnet.png
+        icon: birdnet
         href: {{HOMEPAGE_VAR_BIRDNET_URL}}
         description: Container Status
         server: local-docker
         container: birdnet-go
     - Rallly:
-        icon: rallly.png
+        icon: rallly
         href: http://localhost/
         description: TODO
 
