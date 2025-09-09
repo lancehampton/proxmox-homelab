@@ -100,7 +100,7 @@
       widgets:
           # if you have 2 or more servers you can modify the "if eq $name" part, add the name of the servers and url. Otherwise remove this part and replace by the default template of this widget
         - type: custom-api
-          title: Servers
+          title: Beszel Stats
           url: http://${BESZEL_URL}/api/collections/systems/records
           method: GET
           options:
