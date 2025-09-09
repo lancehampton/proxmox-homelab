@@ -25,9 +25,15 @@
                 - title: home-assistant
                   url: ${HOMEASSISTANT_URL}
                   icon: di:home-assistant
+                - title: komodo
+                  url: ${KOMODO_URL}
+                  icon: di:komodo
                 - title: readeck
                   url: ${READECK_URL}
                   icon: di:readeck
+                - title: wud
+                  url: ${WUD_URL}
+                  icon: di:whats-up-docker
 
             - type: docker-containers
               title: External
@@ -101,7 +107,7 @@
           # if you have 2 or more servers you can modify the "if eq $name" part, add the name of the servers and url. Otherwise remove this part and replace by the default template of this widget
         - type: custom-api
           title: Beszel Stats
-          url: http://${BESZEL_URL}/api/collections/systems/records
+          url: ${BESZEL_URL}/api/collections/systems/records
           method: GET
           options:
             in-new-tab: true
@@ -123,9 +129,9 @@
               {{ $name := .String "name" }}
               {{ $redirect := "" }}
               {{ if eq $name "thor" }}
-                {{ $redirect = "http://${BESZEL_URL}" }}
+                {{ $redirect = "${BESZEL_URL}" }}
               {{ else if eq $name "loki" }}
-                {{ $redirect = "http://${BESZEL_URL}" }}
+                {{ $redirect = "${BESZEL_URL}" }}
               {{ end }}
               <div style="margin-bottom: 2em;">
               {{ $link := "" }}
@@ -200,7 +206,7 @@
         - type: custom-api
           title: What's Up Docker?
           cache: 1h
-          url: http://${WUD_URL}/api/containers/
+          url: ${WUD_URL}/api/containers/
           method: GET
           template: |
             {{/* You are using WUD Monitor v2.0*/}}
