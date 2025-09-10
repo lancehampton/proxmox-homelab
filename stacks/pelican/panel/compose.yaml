@@ -5,17 +5,19 @@ services:
     networks:
       - default
     ports:
-      - "80:80"
-      - "443:443"
+      - "9080:80"
+      - "9443:443"
     extra_hosts:
       - "host.docker.internal:host-gateway"
     volumes:
       - pelican-data:/pelican-data
       - pelican-logs:/var/www/html/storage/logs
     environment:
-      XDG_DATA_HOME: /pelican-data
-      APP_URL: "http://localhost"
+      APP_ENV: production
+      APP_DEBUG: false
+      APP_URL: "${APP_URL:-http://localhost}"
       ADMIN_EMAIL: ${ADMIN_EMAIL}
+      XDG_DATA_HOME: /pelican-data
 
 volumes:
   pelican-data:
