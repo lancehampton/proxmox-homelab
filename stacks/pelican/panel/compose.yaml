@@ -23,8 +23,8 @@ volumes:
   pelican-data:
   pelican-logs:
 
-networks:
-  default:
-    ipam:
-      config:
-        - subnet: 172.20.0.0/16
+# networks:
+#   default:
+#     ipam:
+#       config:
+#         - subnet: 172.21.0.0/16
