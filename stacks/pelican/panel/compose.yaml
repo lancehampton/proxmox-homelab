@@ -18,6 +18,7 @@ services:
       APP_DEBUG: false
       APP_TIMEZONE: America/New_York
       APP_URL: "${APP_URL:-http://localhost}"
+      TRUSTED_PROXIES: "*" # Replace with actual NPM proxy IP later
       XDG_DATA_HOME: /pelican-data
 
 volumes:
