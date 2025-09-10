@@ -1,5 +1,3 @@
-name: komodo-core
-
 services:
   mongo:
     image: mongo
