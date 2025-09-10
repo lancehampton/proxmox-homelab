@@ -1,4 +1,4 @@
-name: komodo
+name: komodo-core
 
 services:
   mongo:
