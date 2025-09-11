@@ -11,7 +11,7 @@ x-common:
     # This URL should be the URL that your reverse proxy routes to the panel server
     APP_URL: ${APP_URL}
     # A list of valid timezones can be found here: http://php.net/manual/en/timezones.php
-    APP_TIMEZONE: ${APP_TIMEZONE}
+    APP_TIMEZONE: ${APP_TIMEZONE:-"America/New_York"}
     APP_SERVICE_AUTHOR: ${APP_SERVICE_AUTHOR}
     TRUSTED_PROXIES: ${TRUSTED_PROXIES:-"*"} # Set this to your proxy IP
     # Uncomment the line below and set to a non-empty value if you want to use Let's Encrypt
