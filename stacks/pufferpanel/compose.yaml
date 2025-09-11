@@ -1,6 +1,6 @@
 services:
   pufferpanel:
-    image: pufferpanel/pufferpanel:latest
+    image: pufferpanel/pufferpanel:3.0.0-rc.15
     container_name: pufferpanel
     restart: on-failure
     ports:
@@ -10,8 +10,6 @@ services:
       - pufferpanel-config:/etc/pufferpanel
       - pufferpanel-data:/var/lib/pufferpanel:z
       - /var/run/docker.sock:/var/run/docker.sock
-    # environment:
-    #   - PUFFERPANEL_WEB_HOST=0.0.0.0
 
 volumes:
   pufferpanel-config:
