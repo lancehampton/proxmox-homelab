@@ -10,7 +10,7 @@ variable "cloudflare_account_id" {
 variable "cloudflare_api_token" {
   sensitive   = true
   type        = string
-  description = "Account API token for Cloudflare."
+  description = "Account API token for Cloudflare"
 }
 
 variable "cloudflare_tunnel_id" {
@@ -24,13 +24,18 @@ variable "cloudflare_zone_id" {
   description = "Cloudflare zone ID (root DNS zone) for homelab apps."
 }
 
+variable "cloudflare_domain" {
+  description = "The root domain managed in Cloudflare for the homelab apps, without the https:// prefix (e.g., example.com)."
+  type        = string
+}
+
 variable "cloudflare_admin_emails" {
-  description = "List of admin emails for Cloudflare Zero Trust"
+  description = "List of admin emails for Cloudflare Zero Trust."
   type        = list(string)
 }
 
 variable "cloudflare_family_emails" {
-  description = "List of family emails for Cloudflare Zero Trust"
+  description = "List of family emails for Cloudflare Zero Trust."
   type        = list(string)
 }
 
@@ -97,8 +102,13 @@ variable "ts_api_key" {
   sensitive   = true
 }
 
+variable "ts_org_name" {
+  description = "Tailscale organization name"
+  type        = string
+}
+
 variable "ts_tailnet" {
-  description = "Tailscale Tailnet name"
+  description = "Tailscale tailnet name"
   type        = string
 }
 

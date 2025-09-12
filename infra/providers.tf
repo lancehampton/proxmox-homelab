@@ -38,7 +38,7 @@ provider "cloudflare" {
 
 provider "tailscale" {
   api_key = var.ts_api_key
-  tailnet = var.ts_tailnet
+  tailnet = var.ts_org_name
 }
 
 provider "proxmox" {

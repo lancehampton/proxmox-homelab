@@ -68,15 +68,15 @@ resource "cloudflare_dns_record" "apps" {
   proxied = true
 }
 
-# resource "cloudflare_dns_record" "npm_wildcard" {
-#   zone_id = data.cloudflare_zone.homelab.id
-#   name    = "*.local.${data.cloudflare_zone.homelab.name}"
-#   ttl     = 300
-#   type    = "A"
-#   comment = "Nginx Proxy Manager"
-#   content = var.npm_ipv4_address
-#   proxied = false
-# }
+resource "cloudflare_dns_record" "caddy_tailscale" {
+  zone_id = data.cloudflare_zone.homelab.zone_id
+  name    = "*.ts"
+  content = "apps.${var.ts_tailnet}"
+  ttl     = 1
+  type    = "CNAME"
+  comment = "Caddy reverse proxy for Tailscale"
+  proxied = false
+}
 
 resource "cloudflare_zero_trust_access_application" "apps" {
   for_each = var.apps
