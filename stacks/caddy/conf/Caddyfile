@@ -9,3 +9,9 @@ birdnet.{$TAILNET_CNAME} {
   reverse_proxy http://apps:8080
   import cloudflare
 }
+
+# glance
+home.{$TAILNET_CNAME} {
+  reverse_proxy http://apps:3080
+  import cloudflare
+}
