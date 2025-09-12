@@ -25,25 +25,25 @@
                 komodo-core-core-1:
                   name: Komodo
                   description: Docker stack manager
-                  url: ${KOMODO_URL}
+                  url: ${KOMODO_EXT_URL}
                   icon: di:komodo
                   hide: false
                 birdnet-go:
                   name: BirdNET
                   description: Bird song identification
-                  url: ${BIRDNET_URL}
+                  url: ${BIRDNET_EXT_URL}
                   icon: di:birdnet.png
                   hide: false
                 readeck:
                   name: Readeck
                   description: Read-It-Later
-                  url: ${READECK_URL}
+                  url: ${READECK_EXT_URL}
                   icon: di:readeck
                   hide: false
                 wud:
                   name: What's Up Docker?
                   description: Docker Image Updates
-                  url: ${WUD_URL}
+                  url: ${WUD_EXT_URL}
                   icon: di:whats-up-docker
                   hide: false
 
@@ -52,7 +52,7 @@
               title: VM
               sites:
                 - title: home-assistant
-                  url: ${HOMEASSISTANT_URL}
+                  url: ${HOMEASSISTANT_TS_URL}
                   icon: di:home-assistant
 
         - type: group
@@ -109,7 +109,7 @@
           # if you have 2 or more servers you can modify the "if eq $name" part, add the name of the servers and url. Otherwise remove this part and replace by the default template of this widget
         - type: custom-api
           title: Beszel Stats
-          url: ${BESZEL_URL}/api/collections/systems/records
+          url: ${BESZEL_TS_URL}/api/collections/systems/records
           method: GET
           options:
             in-new-tab: true
@@ -131,9 +131,9 @@
               {{ $name := .String "name" }}
               {{ $redirect := "" }}
               {{ if eq $name "thor" }}
-                {{ $redirect = "${BESZEL_URL}" }}
+                {{ $redirect = "${BESZEL_EXT_URL}" }}
               {{ else if eq $name "loki" }}
-                {{ $redirect = "${BESZEL_URL}" }}
+                {{ $redirect = "${BESZEL_EXT_URL}" }}
               {{ end }}
               <div style="margin-bottom: 2em;">
               {{ $link := "" }}
@@ -208,7 +208,7 @@
         - type: custom-api
           title: What's Up Docker?
           cache: 1h
-          url: ${WUD_URL}/api/containers/
+          url: ${WUD_TS_URL}/api/containers/
           method: GET
           template: |
             {{/* You are using WUD Monitor v2.0*/}}
