@@ -42,6 +42,6 @@ panel.{$TAILNET_CNAME} {
 
 # pterodactyl wings
 wings.{$TAILNET_CNAME} {
-  reverse_proxy http://games:443
+  reverse_proxy http://games:8080
   import cloudflare
 }
