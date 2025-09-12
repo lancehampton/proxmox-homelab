@@ -19,10 +19,10 @@
           title: Services
           widgets:
             - type: docker-containers
-              title: External
+              title: Docker
               hide-by-default: true
               containers:
-                komodo-core-1:
+                komodo-core-core-1:
                   name: Komodo
                   description: Docker stack manager
                   url: ${KOMODO_URL}
