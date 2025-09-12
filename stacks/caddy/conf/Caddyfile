@@ -36,12 +36,12 @@ komodo.{$TAILNET_CNAME} {
 
 # pterodactyl panel
 panel.{$TAILNET_CNAME} {
-  reverse_proxy http://{$TS_APPS_IP}:2080
+  reverse_proxy http://apps:2080
   import cloudflare
 }
 
 # pterodactyl wings
 wings.{$TAILNET_CNAME} {
-  reverse_proxy http://{$TS_GAMES_IP}:8080
+  reverse_proxy http://games:8080
   import cloudflare
 }
