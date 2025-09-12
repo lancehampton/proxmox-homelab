@@ -5,37 +5,37 @@
 }
 
 # birdnet
-birdnet.{$TAILSCALE_CNAME} {
+birdnet.{$CLOUDFLARE_DOMAIN} {
   reverse_proxy http://apps:8080
   import cloudflare
 }
 
 # glance
-home.{$TAILSCALE_CNAME} {
+home.{$CLOUDFLARE_DOMAIN} {
   reverse_proxy http://apps:3080
   import cloudflare
 }
 
 # readeck
-readeck.{$TAILSCALE_CNAME} {
+readeck.{$CLOUDFLARE_DOMAIN} {
   reverse_proxy http://apps:8000
   import cloudflare
 }
 
 # wud
-wud.{$TAILSCALE_CNAME} {
+wud.{$CLOUDFLARE_DOMAIN} {
   reverse_proxy http://apps:3090
   import cloudflare
 }
 
 # komodo
-komodo.{$TAILSCALE_CNAME} {
+komodo.{$CLOUDFLARE_DOMAIN} {
   reverse_proxy http://apps:9120
   import cloudflare
 }
 
 # beszel
-beszel.{$TAILSCALE_CNAME} {
+beszel.{$CLOUDFLARE_DOMAIN} {
   reverse_proxy http://apps:8090
   import cloudflare
 }
