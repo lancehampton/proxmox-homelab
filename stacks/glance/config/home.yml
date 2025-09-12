@@ -18,23 +18,6 @@
         - type: group
           title: Services
           widgets:
-            - type: monitor
-              cache: 1m
-              title: Internal
-              sites:
-                - title: home-assistant
-                  url: ${HOMEASSISTANT_URL}
-                  icon: di:home-assistant
-                - title: komodo
-                  url: ${KOMODO_URL}
-                  icon: di:komodo
-                - title: readeck
-                  url: ${READECK_URL}
-                  icon: di:readeck
-                - title: wud
-                  url: ${WUD_URL}
-                  icon: di:whats-up-docker
-
             - type: docker-containers
               title: External
               hide-by-default: true
@@ -51,16 +34,35 @@
                   url: ${BIRDNET_URL}
                   icon: di:birdnet.png
                   hide: false
+                readeck:
+                  name: Readeck
+                  description: Read-It-Later
+                  url: ${READECK_URL}
+                  icon: di:readeck
+                  hide: false
+                wud:
+                  name: What's Up Docker?
+                  description: Docker Image Updates
+                  url: ${WUD_URL}
+                  icon: di:whats-up-docker
+                  hide: false
+
+            - type: monitor
+              cache: 1m
+              title: VM
+              sites:
+                - title: home-assistant
+                  url: ${HOMEASSISTANT_URL}
+                  icon: di:home-assistant
 
         - type: group
           widgets:
-
-          - type: reddit
-            subreddit: selfhosted
-            collapse-after: 7
-          - type: reddit
-            subreddit: homelab
-            collapse-after: 7
+            - type: reddit
+              subreddit: selfhosted
+              collapse-after: 7
+            - type: reddit
+              subreddit: homelab
+              collapse-after: 7
 
     - size: small
       widgets:
