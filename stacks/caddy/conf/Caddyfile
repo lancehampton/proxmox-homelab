@@ -34,8 +34,14 @@ komodo.{$TAILNET_CNAME} {
   import cloudflare
 }
 
-# pelican panel
+# pterodactyl panel
 panel.{$TAILNET_CNAME} {
   reverse_proxy http://apps:80
+  import cloudflare
+}
+
+# pelican panel
+wings.{$TAILNET_CNAME} {
+  reverse_proxy http://games:80
   import cloudflare
 }
