@@ -40,8 +40,8 @@ panel.{$TAILNET_CNAME} {
   import cloudflare
 }
 
-# pelican panel
+# pterodactyl wings
 wings.{$TAILNET_CNAME} {
-  reverse_proxy http://games:80
+  reverse_proxy http://games:443
   import cloudflare
 }
