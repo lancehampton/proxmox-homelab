@@ -1,48 +1,35 @@
 (cloudflare) {
   tls {
     dns cloudflare {$CLOUDFLARE_API_TOKEN}
-    resolvers 1.1.1.1 1.0.0.1
   }
 }
 
 # birdnet
-birdnet.{$CLOUDFLARE_DOMAIN} {
+birdnet.{$TAILSCALE_CNAME} {
   reverse_proxy http://apps:8080
   import cloudflare
 }
 
 # glance
-home.{$CLOUDFLARE_DOMAIN} {
+home.{$TAILSCALE_CNAME} {
   reverse_proxy http://apps:3080
   import cloudflare
 }
 
 # readeck
-readeck.{$CLOUDFLARE_DOMAIN} {
+readeck.{$TAILSCALE_CNAME} {
   reverse_proxy http://apps:8000
   import cloudflare
 }
 
 # wud
-wud.{$CLOUDFLARE_DOMAIN} {
+wud.{$TAILSCALE_CNAME} {
   reverse_proxy http://apps:3090
   import cloudflare
 }
 
 # komodo
-komodo.{$CLOUDFLARE_DOMAIN} {
+komodo.{$TAILSCALE_CNAME} {
   reverse_proxy http://apps:9120
-  import cloudflare
-}
-
-# pterodactyl panel
-panel.{$CLOUDFLARE_DOMAIN} {
-  reverse_proxy http://apps:2080
-  import cloudflare
-}
-
-# pterodactyl wings
-wings.{$CLOUDFLARE_DOMAIN} {
-  reverse_proxy http://games:8080
   import cloudflare
 }
