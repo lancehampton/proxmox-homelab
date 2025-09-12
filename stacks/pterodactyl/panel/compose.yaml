@@ -1,4 +1,3 @@
-version: '3.8'
 x-common:
   database:
     &db-environment
@@ -73,10 +72,6 @@ services:
       REDIS_HOST: "cache"
       DB_HOST: "database"
       DB_PORT: "3306"
-    dns:
-      - 100.100.100.100  # Tailscale DNS (primary)
-      - 1.1.1.1          # Cloudflare (fallback)
-      - 1.0.0.1          # Cloudflare (fallback)
 networks:
   default:
     ipam:
