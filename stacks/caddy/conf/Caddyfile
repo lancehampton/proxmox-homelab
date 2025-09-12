@@ -15,3 +15,21 @@ home.{$TAILNET_CNAME} {
   reverse_proxy http://apps:3080
   import cloudflare
 }
+
+# readeck {
+readeck.{$TAILNET_CNAME}
+  reverse_proxy http://apps.8000
+  import cloudflare
+}
+
+# wud {
+wud.{$TAILNET_CNAME}
+  reverse_proxy http://apps.3090
+  import cloudflare
+}
+
+# komodo {
+komodo.{$TAILNET_CNAME}
+  reverse_proxy http://apps.9120
+  import cloudflare
+}
