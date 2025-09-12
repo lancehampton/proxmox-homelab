@@ -6,43 +6,43 @@
 }
 
 # birdnet
-birdnet.{$TAILNET_CNAME} {
-  reverse_proxy http://apps.home:8080
+birdnet.{$CLOUDFLARE_DOMAIN} {
+  reverse_proxy http://apps:8080
   import cloudflare
 }
 
 # glance
-home.{$TAILNET_CNAME} {
-  reverse_proxy http://apps.home:3080
+home.{$CLOUDFLARE_DOMAIN} {
+  reverse_proxy http://apps:3080
   import cloudflare
 }
 
 # readeck
-readeck.{$TAILNET_CNAME} {
-  reverse_proxy http://apps.home:8000
+readeck.{$CLOUDFLARE_DOMAIN} {
+  reverse_proxy http://apps:8000
   import cloudflare
 }
 
 # wud
-wud.{$TAILNET_CNAME} {
-  reverse_proxy http://apps.home:3090
+wud.{$CLOUDFLARE_DOMAIN} {
+  reverse_proxy http://apps:3090
   import cloudflare
 }
 
 # komodo
-komodo.{$TAILNET_CNAME} {
-  reverse_proxy http://apps.home:9120
+komodo.{$CLOUDFLARE_DOMAIN} {
+  reverse_proxy http://apps:9120
   import cloudflare
 }
 
 # pterodactyl panel
-panel.{$TAILNET_CNAME} {
-  reverse_proxy http://apps.home:2080
+panel.{$CLOUDFLARE_DOMAIN} {
+  reverse_proxy http://apps:2080
   import cloudflare
 }
 
 # pterodactyl wings
-wings.{$TAILNET_CNAME} {
-  reverse_proxy http://games.home:8080
+wings.{$CLOUDFLARE_DOMAIN} {
+  reverse_proxy http://games:8080
   import cloudflare
 }

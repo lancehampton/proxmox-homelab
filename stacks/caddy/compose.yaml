@@ -13,7 +13,7 @@ services:
       - caddy_config:/config
     environment:
       - CLOUDFLARE_API_TOKEN=${CLOUDFLARE_API_TOKEN}
-      - TAILNET_CNAME=${TAILNET_CNAME}
+      - CLOUDFLARE_DOMAIN=${CLOUDFLARE_DOMAIN}
 
 volumes:
   caddy_data:
