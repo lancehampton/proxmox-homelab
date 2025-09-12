@@ -36,6 +36,6 @@ komodo.{$TAILNET_CNAME} {
 
 # pelican panel
 panel.{$TAILNET_CNAME} {
-  reverse_proxy http://apps:443
+  reverse_proxy http://apps:80
   import cloudflare
 }
