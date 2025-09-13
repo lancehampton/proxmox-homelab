@@ -52,7 +52,8 @@
               title: VM
               sites:
                 - title: home-assistant
-                  url: ${HOMEASSISTANT_TS_URL}
+                  url: ${HOMEASSISTANT_EXT_URL}
+                  check-url: ${HOMEASSISTANT_TS_URL}
                   icon: di:home-assistant
 
         - type: group
