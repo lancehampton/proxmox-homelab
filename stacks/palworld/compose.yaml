@@ -40,5 +40,5 @@ services:
       - "27015:27015/udp"
 networks:
   palworld_nw:
-    name: palworld_nw      
+    name: palworld_nw
 
