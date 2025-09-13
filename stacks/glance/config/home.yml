@@ -51,7 +51,7 @@
               cache: 1m
               title: VM
               sites:
-                - title: home-assistant
+                - title: Home Assistant
                   url: ${HOMEASSISTANT_EXT_URL}
                   check-url: ${HOMEASSISTANT_TS_URL}
                   icon: di:home-assistant
