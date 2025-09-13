@@ -5,43 +5,43 @@
 }
 
 # birdnet
-birdnet.{$CLOUDFLARE_DOMAIN} {
+birdnet.{$CLOUDFLARE_CNAME} {
   reverse_proxy http://apps:8080
   import cloudflare
 }
 
 # glance
-home.{$CLOUDFLARE_DOMAIN} {
+home.{$CLOUDFLARE_CNAME} {
   reverse_proxy http://apps:3080
   import cloudflare
 }
 
 # readeck
-readeck.{$CLOUDFLARE_DOMAIN} {
+readeck.{$CLOUDFLARE_CNAME} {
   reverse_proxy http://apps:8000
   import cloudflare
 }
 
 # wud
-wud.{$CLOUDFLARE_DOMAIN} {
+wud.{$CLOUDFLARE_CNAME} {
   reverse_proxy http://apps:3090
   import cloudflare
 }
 
 # komodo
-komodo.{$CLOUDFLARE_DOMAIN} {
+komodo.{$CLOUDFLARE_CNAME} {
   reverse_proxy http://apps:9120
   import cloudflare
 }
 
 # beszel
-beszel.{$CLOUDFLARE_DOMAIN} {
+beszel.{$CLOUDFLARE_CNAME} {
   reverse_proxy http://apps:8090
   import cloudflare
 }
 
 # homeassistant
-homeassistant.{$CLOUDFLARE_DOMAIN} {
+homeassistant.{$CLOUDFLARE_CNAME} {
   reverse_proxy http://homeassistant.{$TAILNET_NAME}:8123
   import cloudflare
 }
