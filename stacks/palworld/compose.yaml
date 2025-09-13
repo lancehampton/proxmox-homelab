@@ -16,7 +16,7 @@ services:
       - SERVER_PASSWORD=${SERVER_PASSWORD}
       - ADMIN_PASSWORD=${ADMIN_PASSWORD}
     volumes:
-      - ./palworld:/palworld/
+      - ./data:/palworld/
 
   palworld-tailscale:
     image: tailscale/tailscale:latest
