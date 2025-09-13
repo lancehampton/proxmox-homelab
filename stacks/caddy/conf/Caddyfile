@@ -39,3 +39,9 @@ beszel.{$CLOUDFLARE_DOMAIN} {
   reverse_proxy http://apps:8090
   import cloudflare
 }
+
+# homeassistant
+homeassistant.{$CLOUDFLARE_DOMAIN} {
+  reverse_proxy http://homeassistant.{$TAILNET_NAME}:8123
+  import cloudflare
+}
