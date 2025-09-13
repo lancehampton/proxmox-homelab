@@ -34,7 +34,7 @@ services:
       - net_admin
     restart: unless-stopped
     networks:
-      - palworld
+      - palworld_nw
     ports:
       - "8211:8211/udp"
       - "27015:27015/udp"
