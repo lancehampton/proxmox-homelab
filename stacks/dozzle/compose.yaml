@@ -14,3 +14,5 @@ services:
       #
       # Uncomment to enable authentication. See https://dozzle.dev/guide/authentication
       # - DOZZLE_AUTH_PROVIDER=simple
+      # https://dozzle.dev/guide/agent#how-to-connect-to-an-agent
+      - DOZZLE_REMOTE_AGENT=${DOZZLE_AGENT_LIST}
