@@ -46,6 +46,12 @@
                   url: ${WUD_EXT_URL}
                   icon: di:whats-up-docker
                   hide: false
+                dozzle-server-dozzle-1:
+                  name: Dozzle
+                  description: Docker Log Viewer
+                  url: ${DOZZLE_EXT_URL}
+                  icon: di:dozzle
+                  hide: false
 
             - type: monitor
               cache: 1m
