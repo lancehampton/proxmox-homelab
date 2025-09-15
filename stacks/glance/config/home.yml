@@ -24,13 +24,13 @@
               containers:
                 komodo-core-core-1:
                   name: Komodo
-                  description: Docker stack manager
+                  description: Docker Stack Manager
                   url: ${KOMODO_EXT_URL}
                   icon: di:komodo
                   hide: false
                 birdnet-go:
                   name: BirdNET
-                  description: Bird song identification
+                  description: Bird Song Identification
                   url: ${BIRDNET_EXT_URL}
                   icon: di:birdnet.png
                   hide: false
