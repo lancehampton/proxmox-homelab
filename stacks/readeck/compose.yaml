@@ -6,7 +6,7 @@ services:
       - 8000:8000
     environment:
       # Defines the application log level. Can be error, warn, info, debug.
-      - READECK_LOG_LEVEL=info
+      - READECK_LOG_LEVEL=warn
       # The IP address on which Readeck listens.
       - READECK_SERVER_HOST=0.0.0.0
       # The TCP port on which Readeck listens. Update container port above to match (right of colon).
