@@ -138,9 +138,9 @@
               {{ $name := .String "name" }}
               {{ $redirect := "" }}
               {{ if eq $name "thor" }}
-                {{ $redirect = "${BESZEL_EXT_URL}" }}
+                {{ $redirect = "${BESZEL_EXT_URL}/system/thor" }}
               {{ else if eq $name "loki" }}
-                {{ $redirect = "${BESZEL_EXT_URL}" }}
+                {{ $redirect = "${BESZEL_EXT_URL}/system/loki" }}
               {{ end }}
               <div style="margin-bottom: 2em;">
               {{ $link := "" }}
