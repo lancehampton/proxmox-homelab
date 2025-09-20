@@ -7,9 +7,9 @@ services:
     restart: unless-stopped
     container_name: voyagers-server
     volumes:
-      - "./dedicated-server:/dedicated-server"
-      - "./saved:/dedicated-server/BoatGame/Saved"
-      - "./config:/dedicated-server/BoatGame/Saved/PersistedData/CustomConfig"
+      - "./gamedata:/gamedata"
+      - "./saved:/saved"
+      - "./config:/config"
     # ports:
     #   - "0.0.0.0:7777:7777/udp"  # game port
     #   - "0.0.0.0:7778:27015/udp" # steam query port
