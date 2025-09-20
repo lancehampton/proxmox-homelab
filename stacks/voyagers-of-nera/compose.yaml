@@ -31,9 +31,9 @@ services:
     restart: unless-stopped
     networks:
       - voyagers_nw
-    ports:
-      - "7777:7777/udp"
-      - "27015:27015/udp"
+    # ports:
+    #   - "7777:7777/udp"
+    #   - "27015:27015/udp"
 networks:
   voyagers_nw:
     name: voyagers_nw
