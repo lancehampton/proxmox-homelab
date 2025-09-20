@@ -8,4 +8,4 @@ services:
       - "./config:/dedicated-server/BoatGame/Saved/PersistedData/CustomConfig"
     ports:
       - "0.0.0.0:7777:7777/udp"
-      - "0.0.0.0:7778:27015/udp"
+      - "0.0.0.0:27015:27015/udp"
