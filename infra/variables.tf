@@ -87,11 +87,6 @@ variable "apps" {
   # }
 }
 
-variable "npm_ipv4_address" {
-  description = "IPv4 address for Nginx Proxy Manager"
-  type        = string
-}
-
 #############
 # Tailscale #
 #############
@@ -109,6 +104,11 @@ variable "ts_org_name" {
 
 variable "ts_tailnet" {
   description = "Tailscale tailnet name"
+  type        = string
+}
+
+variable "ts_proxy_ipv4" {
+  description = "IPv4 address of the reverse proxy in the Tailscale network"
   type        = string
 }
 

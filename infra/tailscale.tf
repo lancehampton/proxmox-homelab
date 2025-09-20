@@ -6,9 +6,9 @@
 #   description   = "proxmox-ve-${var.ve_node_name}"
 # }
 
-data "tailscale_device" "thor" {
-  hostname = "thor"
-}
+# data "tailscale_device" "thor" {
+#   hostname = "thor"
+# }
 
 # output "tailscale_device_attrs" {
 #   value = data.tailscale_device.thor

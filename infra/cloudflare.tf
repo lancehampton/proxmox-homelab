@@ -68,9 +68,9 @@ resource "cloudflare_dns_record" "apps" {
   proxied = true
 }
 
-resource "cloudflare_dns_record" "caddy_tailscale" {
+resource "cloudflare_dns_record" "caddy_proxy" {
   zone_id = data.cloudflare_zone.homelab.zone_id
-  name    = "*.ts"
+  name    = "*.local"
   content = "apps.${var.ts_tailnet}"
   ttl     = 1
   type    = "CNAME"
