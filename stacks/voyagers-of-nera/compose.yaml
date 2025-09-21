@@ -1,5 +1,5 @@
 services:
-  voyagers:
+  voyagers-server:
     image: "ghcr.io/kharnsedreed/voyagers-of-nera-linux-docker:latest"
     depends_on:
       - voyagers-tailscale
