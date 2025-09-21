@@ -37,7 +37,7 @@ services:
       - palworld_nw
     ports:
       - "8211:8211/udp"
-      - "27015:27015/udp"
+      - "8212:27015/udp"
 networks:
   palworld_nw:
     name: palworld_nw
