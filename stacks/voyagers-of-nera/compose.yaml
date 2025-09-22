@@ -6,13 +6,15 @@ services:
     network_mode: "service:voyagers-tailscale"
     restart: unless-stopped
     container_name: voyagers-server
+    environment:
+      - EOS_OVERRIDE_HOST_IP=${EOS_OVERRIDE_HOST_IP}
     volumes:
       - "/gamedata/voyagers/server:/dedicated-server"
       - "/gamedata/voyagers/saved:/dedicated-server/BoatGame/Saved"
       - "/gamedata/voyagers/config:/dedicated-server/BoatGame/Saved/PersistedData/CustomConfig"
     # ports:
-    #   - "0.0.0.0:7777:7777/udp"  # game port
-    #   - "0.0.0.0:7778:27015/udp" # steam query port
+    #   - "7777:7777/udp"  # game port
+    #   - "7778:27015/udp" # steam query port
 
   voyagers-tailscale:
     image: tailscale/tailscale:latest
