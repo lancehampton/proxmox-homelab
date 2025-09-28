@@ -45,3 +45,8 @@ logs.{$CLOUDFLARE_CNAME} {
   reverse_proxy http://apps:8010
   import cloudflare
 }
+
+coder.{$CLOUDFLARE_CNAME} {
+  reverse_proxy http://apps:7080
+  import cloudflare
+}
