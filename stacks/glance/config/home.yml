@@ -52,6 +52,10 @@
                   url: ${DOZZLE_EXT_URL}
                   icon: di:dozzle
                   hide: false
+                beszel:
+                  name: Beszel
+                  description: Docker Resource Monitoring
+                  url: ${BESZEL_EXT_URL}
 
             - type: monitor
               cache: 1m
