@@ -25,9 +25,6 @@
           widgets:
             - type: reddit
               show-thumbnails: true
-              subreddit: arcraiders
-            - type: reddit
-              show-thumbnails: true
               subreddit: duneawakening
 
         - type: videos
