@@ -41,12 +41,12 @@
     - size: small
       widgets:
         - type: rss
-          title: Linux Gaming
+          title: Gaming News
           style: vertical-cards
           limit: 25
           collapse-after: 10
           feeds:
-            - url: https://www.gamingonlinux.com/article_rss.php
-              title: GamingOnLinux
+            - url: https://www.videogameschronicle.com/feed/
+              title: Video Games Chronicle
             - url: https://steamdeckhq.com/feed/
               title: Steam Deck HQ
