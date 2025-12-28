@@ -12,7 +12,8 @@ RUN useradd -m -s /bin/bash steam
 # Copy SteamCMD from the builder stage
 COPY --from=builder --chown=steam:steam /steamcmd /home/steam/steamcmd
 
-COPY entrypoint.sh /
+COPY entrypoint.sh /entrypoint.sh
+RUN chmod +x /entrypoint.sh
 
 USER steam
 
