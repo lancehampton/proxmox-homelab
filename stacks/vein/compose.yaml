@@ -1,9 +1,9 @@
 services:
   vein:
+    build: .
     depends_on:
       - vein-tailscale
     network_mode: "service:vein-tailscale"
-    build: .
     restart: unless-stopped
     container_name: vein-server
     # ports:
