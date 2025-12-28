@@ -9,7 +9,6 @@ services:
     env_file: .env
     environment:
       - SERVER_PASSWORD=${SERVER_PASSWORD}
-      - ADMIN_PASSWORD=${ADMIN_PASSWORD}
   vein-tailscale:
     image: tailscale/tailscale:latest
     container_name: vein-tailscale
