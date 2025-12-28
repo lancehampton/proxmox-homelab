@@ -5,6 +5,7 @@ services:
     network_mode: "service:vein-tailscale"
     build: .
     restart: unless-stopped
+    container_name: vein-server
     # ports:
     #   - "7777:${GAME_PORT:-7777}/udp"
     volumes:
