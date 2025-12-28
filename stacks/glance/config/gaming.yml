@@ -25,6 +25,9 @@
           widgets:
             - type: reddit
               show-thumbnails: true
+              subreddit: veingame
+            - type: reddit
+              show-thumbnails: true
               subreddit: duneawakening
 
         - type: videos
