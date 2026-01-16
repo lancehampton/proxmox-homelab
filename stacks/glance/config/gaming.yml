@@ -28,7 +28,7 @@
               subreddit: veingame
             - type: reddit
               show-thumbnails: true
-              subreddit: duneawakening
+              subreddit: snowrunner
 
         - type: videos
           style: grid-cards

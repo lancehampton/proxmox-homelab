@@ -37,7 +37,7 @@ set -e
 : "${VEIN_PERMADEATH:=false}"
 : "${VEIN_PERSISTENT_CORPSES:=true}"
 : "${VEIN_POWER_SHUTOFF_TIME:=46.0}"
-: "${VEIN_PVP:=true}"
+: "${VEIN_PVP:=false}"
 : "${VEIN_SCARCITY_DIFFICULTY:=2.0}"
 : "${VEIN_STAGGER_ODDS:=0.1}"
 : "${VEIN_START_TIME:=0.0}"
@@ -165,6 +165,7 @@ GS_ZombieWalkerPercentage=$VEIN_ZOMBIE_WALKER_PERCENTAGE
 GS_ZombieWalkSpeedMultiplier=$VEIN_ZOMBIE_WALK_SPEED_MULTIPLIER
 
 [/Script/Vein.VeinGameSession]
+bPublic=False
 ServerName=$SERVER_NAME
 ServerDescription=$SERVER_DESCRIPTION
 Password=$SERVER_PASSWORD
