@@ -22,8 +22,6 @@ services:
     network_mode: service:enshrouded-tailscale
     volumes:
       - ./gamedata/enshrouded:/opt/enshrouded
-    devices:
-      - /dev/ntsync:/dev/ntsync
     env_file: .env
     environment:
       - SERVER_ROLE_0_PASSWORD=${ADMIN_PASSWORD}
